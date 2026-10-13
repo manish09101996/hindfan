@@ -13,6 +13,10 @@ class Setting extends Model
         'key',
         'value',
         'group',
+        'label',
+        'type',
+        'description',
+        'is_public',
     ];
 
     /**
@@ -45,19 +49,29 @@ class Setting extends Model
     /**
      * Set or update setting value.
      */
-    public static function set(string $key, ?string $value, string $group = 'general'): self
+    public static function set(string $key, ?string $value, string $group = 'general', ?string $label = null): self
     {
         $trimmed = ($value !== null) ? trim($value) : null;
         if ($trimmed === '') {
             $trimmed = null;
         }
 
+        $payload = [
+            'value' => $trimmed,
+            'group' => $group,
+        ];
+
+        try {
+            if (\Illuminate\Support\Facades\Schema::hasColumn('settings', 'label')) {
+                $payload['label'] = $label ?? ucwords(str_replace('_', ' ', $key));
+            }
+        } catch (\Throwable $e) {
+            // Ignore schema inspection issues
+        }
+
         $setting = static::updateOrCreate(
             ['key' => $key],
-            [
-                'value' => $trimmed,
-                'group' => $group,
-            ]
+            $payload
         );
 
         static::$runtimeCache[$key] = $trimmed;
