@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text COLLATE utf8mb4_unicode_ci,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'text',
-  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
   `is_public` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -120,21 +120,24 @@ CREATE TABLE IF NOT EXISTS `settings` (
   UNIQUE KEY `settings_key_unique` (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
 -- Dumping data for table `settings`
-INSERT INTO `settings` (`id`, `key`, `value`, `group`, `created_at`, `updated_at`) VALUES
-(1, 'contact_address', 'Custom Industrial Area, Phase 2, Punjab', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(2, 'contact_phone_1', '+91-92162-07097', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
-(3, 'contact_phone_1_label', 'Chief Operations', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(4, 'contact_phone_2', NULL, 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(5, 'contact_phone_2_label', NULL, 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(6, 'contact_email', 'hindfan@yahoo.com', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
-(7, 'working_hours', 'Mon - Fri: 09:00 - 18:00', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(8, 'social_facebook', 'https://facebook.com/customhindfanofficial', 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(9, 'social_youtube', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(10, 'social_instagram', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(11, 'social_linkedin', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(12, 'social_twitter', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(13, 'social_whatsapp', '+919216207097', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18');
+-- --------------------------------------------------------
+INSERT INTO `settings` (`id`, `key`, `value`, `group`, `label`, `created_at`, `updated_at`) VALUES
+(1, 'contact_address', 'Near Gaushala, Phul Road, Rampura Phul, Distt. Bathinda, Punjab - 151103', 'contact', 'Factory Address', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(2, 'contact_phone_1', '+91-92162-07097', 'contact', 'Phone 1', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(3, 'contact_phone_1_label', 'Vishal Bansal', 'contact', 'Phone 1 Label', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(4, 'contact_phone_2', '+91-92162-01187', 'contact', 'Phone 2', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(5, 'contact_phone_2_label', 'Ashok Bansal', 'contact', 'Phone 2 Label', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(6, 'contact_email', 'info@hindfan.com', 'contact', 'Contact Email', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(7, 'working_hours', 'Mon - Fri: 09:00 - 18:00', 'contact', 'Working Hours', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(8, 'social_facebook', 'https://facebook.com/customhindfanofficial', 'social', 'Facebook', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(9, 'social_youtube', NULL, 'social', 'YouTube', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(10, 'social_instagram', NULL, 'social', 'Instagram', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(11, 'social_linkedin', NULL, 'social', 'LinkedIn', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(12, 'social_twitter', NULL, 'social', 'Twitter', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(13, 'social_whatsapp', '+919216207097', 'general', 'WhatsApp Number', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
+(14, 'google_maps_link', 'https://www.google.com/maps?cid=557396234949805422', 'contact', 'Google Maps Link', '2026-10-13 08:15:00', '2026-10-13 08:15:00');
 
 -- --------------------------------------------------------
 -- Table structure for table `categories`
