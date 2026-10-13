@@ -77,25 +77,30 @@
 
                 <div class="col-lg-5">
                     <div class="hero-showcase-container">
+                        <!-- Decorative Dashed Ring in Background -->
                         <div class="hero-fan-backdrop"></div>
-                        <img src="{{ asset('assets/images/products/pedestal_fan_26.jpg') }}" alt="Hindfan 26 Inch Industrial Pedestal Fan" class="hero-fan-img" onerror="this.onerror=null; this.src='{{ asset('assets/images/products/pedestal_fan_chidhi.jpg') }}';">
                         
+                        <!-- Main Product Poster Card -->
+                        <div class="hero-poster-card">
+                            <img src="{{ asset('assets/images/products/pedestal_fan_26.jpg') }}" alt="Hindfan 26 Inch Industrial Pedestal Fan" class="hero-fan-img" onerror="this.onerror=null; this.src='{{ asset('assets/images/products/pedestal_fan_chidhi.jpg') }}';">
+                            
+                            <!-- Brand Authenticity Badge (Floats bottom-left on desktop, neatly below fan on mobile) -->
+                            <div class="hero-floating-badge-clean">
+                                <div class="hero-badge-icon-box">
+                                    <i class="fa fa-shield-halved"></i>
+                                </div>
+                                <div class="hero-badge-text-group">
+                                    <div class="hero-badge-title">Original Brand HIND</div>
+                                    <div class="hero-badge-subtitle">Double Ball Bearings • Pure Copper</div>
+                                </div>
+                                <span class="badge bg-danger rounded-pill hero-badge-pill">PIONEER</span>
+                            </div>
+                        </div>
+
                         <!-- Calligraphy script accent matching reference mockup (Desktop only) -->
                         <div class="hero-script-tag d-none d-lg-block">
                             Reliable Performance
                             <span class="script-accent">Since 1980</span>
-                        </div>
-
-                        <!-- Brand Authenticity Badge -->
-                        <div class="hero-floating-badge-clean">
-                            <div class="bg-primary text-white p-2 rounded-circle flex-shrink-0">
-                                <i class="fa fa-shield-halved fs-5"></i>
-                            </div>
-                            <div>
-                                <div class="text-dark fw-bold small lh-1 mb-1">Original Brand HIND</div>
-                                <div class="text-muted" style="font-size: 0.72rem;">Double Ball Bearings • Pure Copper</div>
-                            </div>
-                            <span class="badge bg-danger ms-auto flex-shrink-0">PIONEER</span>
                         </div>
                     </div>
                 </div>
