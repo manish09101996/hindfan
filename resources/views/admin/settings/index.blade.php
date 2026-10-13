@@ -81,7 +81,7 @@
                                 <label for="contact_phone_2_label" class="form-label fw-semibold text-secondary">
                                     Phone 2 Name / Person (Optional)
                                 </label>
-                                <input type="text" name="contact_phone_2_label" id="contact_phone_2_label" class="form-control" placeholder="e.g. Ashok Bansal" value="{{ old('contact_phone_2_label', $settings['contact_phone_2'] ?? '') }}">
+                                <input type="text" name="contact_phone_2_label" id="contact_phone_2_label" class="form-control" placeholder="e.g. Ashok Bansal" value="{{ old('contact_phone_2_label', $settings['contact_phone_2_label'] ?? '') }}">
                             </div>
                         </div>
 
@@ -104,12 +104,21 @@
                         </div>
 
                         <!-- Google Maps Location Link -->
-                        <div class="mb-2">
+                        <div class="mb-4">
                             <label for="google_maps_link" class="form-label fw-semibold text-secondary">
                                 <i class="fa fa-map-location-dot text-danger me-1"></i> Google Maps Place Link / CID URL
                             </label>
                             <input type="url" name="google_maps_link" id="google_maps_link" class="form-control" placeholder="https://www.google.com/maps?cid=557396234949805422" value="{{ old('google_maps_link', $settings['google_maps_link'] ?? '') }}">
-                            <small class="text-muted">Contact page par Google Maps directions aur embedded map ke liye use hoga.</small>
+                            <small class="text-muted">Direct button "Open in Google Maps" aur "Get Directions" ke liye open link.</small>
+                        </div>
+
+                        <!-- Google Maps Embed URL -->
+                        <div class="mb-2">
+                            <label for="google_maps_embed_url" class="form-label fw-semibold text-secondary">
+                                <i class="fa fa-map text-danger me-1"></i> Google Maps Embed URL (Iframe)
+                            </label>
+                            <input type="url" name="google_maps_embed_url" id="google_maps_embed_url" class="form-control" placeholder="https://www.google.com/maps/embed?pb=..." value="{{ old('google_maps_embed_url', $settings['google_maps_embed_url'] ?? '') }}">
+                            <small class="text-muted">Contact page par interactive map frame load karne ke liye responsive embed link.</small>
                         </div>
                     </div>
                 </div>

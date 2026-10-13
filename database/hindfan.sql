@@ -137,7 +137,8 @@ INSERT INTO `settings` (`id`, `key`, `value`, `group`, `label`, `created_at`, `u
 (11, 'social_linkedin', NULL, 'social', 'LinkedIn', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (12, 'social_twitter', NULL, 'social', 'Twitter', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (13, 'social_whatsapp', '+919216207097', 'general', 'WhatsApp Number', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
-(14, 'google_maps_link', 'https://www.google.com/maps?cid=557396234949805422', 'contact', 'Google Maps Link', '2026-10-13 08:15:00', '2026-10-13 08:15:00');
+(14, 'google_maps_link', 'https://www.google.com/maps?cid=557396234949805422', 'contact', 'Google Maps Link', '2026-10-13 08:15:00', '2026-10-13 08:15:00'),
+(15, 'google_maps_embed_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.441!2d75.23584!3d30.2814947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910c50132330e43%3A0x7bc44ec2752c56e!2sHind%20Fan%20(Hindson%20Industries)!5e0!3m2!1sen!2sin!4v1728800000000!5m2!1sen!2sin', 'contact', 'Google Maps Embed URL', '2026-10-13 08:20:00', '2026-10-13 08:20:00');
 
 -- --------------------------------------------------------
 -- Table structure for table `categories`

@@ -46,6 +46,10 @@ class SettingSeeder extends Seeder
                 'value' => 'https://www.google.com/maps?cid=557396234949805422',
                 'group' => 'contact',
             ],
+            'google_maps_embed_url' => [
+                'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.441!2d75.23584!3d30.2814947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910c50132330e43%3A0x7bc44ec2752c56e!2sHind%20Fan%20(Hindson%20Industries)!5e0!3m2!1sen!2sin!4v1728800000000!5m2!1sen!2sin',
+                'group' => 'contact',
+            ],
 
             // Social Media Profiles
             'social_facebook' => [

@@ -211,14 +211,15 @@
                         </div>
                     @endif
                 </div>
-                <div class="rounded-4 overflow-hidden shadow-sm border" style="height: 400px;">
-                    <iframe src="https://maps.google.com/maps?cid=557396234949805422&output=embed" 
+                <div class="rounded-4 overflow-hidden shadow-sm border bg-light position-relative" style="height: 450px; min-height: 420px;">
+                    <iframe src="{{ site_setting('google_maps_embed_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.441!2d75.23584!3d30.2814947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910c50132330e43%3A0x7bc44ec2752c56e!2sHind%20Fan%20(Hindson%20Industries)!5e0!3m2!1sen!2sin!4v1728800000000!5m2!1sen!2sin') }}" 
                             width="100%" 
                             height="100%" 
-                            style="border:0;" 
+                            style="border:0; width:100%; height:100%; display:block; min-height:420px;" 
                             allowfullscreen="" 
                             loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Hind Fan (Hindson Industries) Factory Location">
                     </iframe>
                 </div>
             </div>
