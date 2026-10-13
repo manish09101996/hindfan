@@ -114,10 +114,6 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     @endif
-                    <span class="text-secondary opacity-50">|</span>
-                    <a href="{{ route('admin.login') }}" class="text-decoration-none text-light opacity-75 small">
-                        <i class="fa fa-lock me-1"></i> Admin Portal
-                    </a>
                 </div>
             </div>
         </div>

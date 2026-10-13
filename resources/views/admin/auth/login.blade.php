@@ -53,7 +53,7 @@
                                 <label for="email" class="form-label fw-semibold small text-secondary">Email Address</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light border-end-0"><i class="fa fa-envelope text-muted"></i></span>
-                                    <input type="email" class="form-control border-start-0" id="email" name="email" required autofocus value="{{ old('email', 'admin@hindfan.com') }}">
+                                    <input type="email" class="form-control border-start-0" id="email" name="email" required autofocus value="{{ old('email') }}" placeholder="Enter your email">
                                 </div>
                             </div>
 
@@ -61,9 +61,8 @@
                                 <label for="password" class="form-label fw-semibold small text-secondary">Password</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light border-end-0"><i class="fa fa-lock text-muted"></i></span>
-                                    <input type="password" class="form-control border-start-0" id="password" name="password" required value="password">
+                                    <input type="password" class="form-control border-start-0" id="password" name="password" required placeholder="Enter your password">
                                 </div>
-                                <div class="small text-muted mt-1">Default credentials: <code>admin@hindfan.com</code> / <code>password</code></div>
                             </div>
 
                             <div class="mb-4 form-check">
