@@ -441,9 +441,6 @@
                                 <i class="fab fa-whatsapp me-2"></i> Get on WhatsApp
                             </a>
                         </div>
-                        <div class="mt-3 text-muted small">
-                            <i class="fa fa-link me-1"></i> Direct PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace" style="word-break: break-all;">/assets/images/Brochure/Brochure%202026.pdf</a>
-                        </div>
                     </div>
                     <div class="col-lg-4 text-center">
                         <div class="p-4 rounded-4 bg-light border d-inline-flex flex-column align-items-center justify-content-center shadow-sm" style="width: 220px; height: 280px; border-top: 6px solid #C8102E !important;">
