@@ -129,7 +129,7 @@ INSERT INTO `settings` (`id`, `key`, `value`, `group`, `label`, `created_at`, `u
 (3, 'contact_phone_1_label', 'Vishal Bansal', 'contact', 'Phone 1 Label', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
 (4, 'contact_phone_2', '+91-92162-01187', 'contact', 'Phone 2', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
 (5, 'contact_phone_2_label', 'Ashok Bansal', 'contact', 'Phone 2 Label', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
-(6, 'contact_email', 'info@hindfan.com', 'contact', 'Contact Email', '2026-10-10 10:50:45', '2026-10-13 08:15:00'),
+(6, 'contact_email', 'hindfan@yahoo.com', 'contact', 'Contact Email', '2026-10-10 10:50:45', '2026-10-13 08:25:00'),
 (7, 'working_hours', 'Mon - Fri: 09:00 - 18:00', 'contact', 'Working Hours', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (8, 'social_facebook', 'https://facebook.com/customhindfanofficial', 'social', 'Facebook', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (9, 'social_youtube', NULL, 'social', 'YouTube', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),

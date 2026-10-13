@@ -60,7 +60,7 @@
           "image": "{{ asset('assets/images/logo.png') }}",
           "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
           "hasMap": "{{ site_setting('google_maps_link', 'https://www.google.com/maps?cid=557396234949805422') }}",
-          "email": "{{ site_setting('contact_email', 'info@hindfan.com') }}",
+          "email": "{{ site_setting('contact_email', 'hindfan@yahoo.com') }}",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Near Gaushala, Phul Road",
