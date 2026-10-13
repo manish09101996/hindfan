@@ -1,5 +1,5 @@
 -- Hindson Industries MySQL Database Dump
--- Generated: 2026-10-13 08:43:21
+-- Generated: 2026-10-13 09:05:26
 -- Compatible with MySQL 5.7+ / MariaDB 10.3+
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -123,18 +123,18 @@ CREATE TABLE IF NOT EXISTS `settings` (
 -- Dumping data for table `settings`
 INSERT INTO `settings` (`id`, `key`, `value`, `group`, `created_at`, `updated_at`) VALUES
 (1, 'contact_address', 'Custom Industrial Area, Phase 2, Punjab', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(2, 'contact_phone_1', '+91-99887-11223', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
+(2, 'contact_phone_1', '+91-92162-07097', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
 (3, 'contact_phone_1_label', 'Chief Operations', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
 (4, 'contact_phone_2', NULL, 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
 (5, 'contact_phone_2_label', NULL, 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:51'),
-(6, 'contact_email', 'custom-desk@hindfan.com', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
+(6, 'contact_email', 'hindfan@yahoo.com', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18'),
 (7, 'working_hours', 'Mon - Fri: 09:00 - 18:00', 'contact', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (8, 'social_facebook', 'https://facebook.com/customhindfanofficial', 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (9, 'social_youtube', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (10, 'social_instagram', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (11, 'social_linkedin', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
 (12, 'social_twitter', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52'),
-(13, 'social_whatsapp', NULL, 'social', '2026-10-10 10:50:45', '2026-10-10 10:56:52');
+(13, 'social_whatsapp', '+919216207097', 'general', '2026-10-10 10:50:45', '2026-10-13 07:05:18');
 
 -- --------------------------------------------------------
 -- Table structure for table `categories`

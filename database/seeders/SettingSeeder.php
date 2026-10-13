@@ -35,7 +35,7 @@ class SettingSeeder extends Seeder
                 'group' => 'contact',
             ],
             'contact_email' => [
-                'value' => 'info@hindfan.com',
+                'value' => 'hindfan@yahoo.com',
                 'group' => 'contact',
             ],
             'working_hours' => [

@@ -90,7 +90,7 @@
                             <label for="contact_email" class="form-label fw-semibold text-secondary">
                                 <i class="fa fa-envelope text-danger me-1"></i> Official Email Address
                             </label>
-                            <input type="email" name="contact_email" id="contact_email" class="form-control" placeholder="e.g. info@hindfan.com" value="{{ old('contact_email', $settings['contact_email'] ?? '') }}">
+                            <input type="email" name="contact_email" id="contact_email" class="form-control" placeholder="e.g. hindfan@yahoo.com" value="{{ old('contact_email', $settings['contact_email'] ?? '') }}">
                             <small class="text-muted">Khali chhodne par topbar, footer aur contact page se email hide ho jayega.</small>
                         </div>
 

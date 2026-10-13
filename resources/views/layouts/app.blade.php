@@ -59,7 +59,7 @@
           "name": "Hindson Industries - Hindfan",
           "image": "{{ asset('assets/images/logo.png') }}",
           "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
-          "email": "{{ site_setting('contact_email', 'info@hindfan.com') }}",
+          "email": "{{ site_setting('contact_email', 'hindfan@yahoo.com') }}",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Near Gaushala, Phul Road",

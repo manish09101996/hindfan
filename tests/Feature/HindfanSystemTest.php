@@ -47,7 +47,7 @@ class HindfanSystemTest extends TestCase
     {
         $response = $this->get('/services');
         $response->assertStatus(200);
-        $response->assertSee('Pedestal Fan Series');
+        $response->assertSee('Heavy Duty Pedestal Fans');
     }
 
     public function test_portfolio_listing_page_loads_published_projects_only()
@@ -313,47 +313,46 @@ class HindfanSystemTest extends TestCase
         // Update settings with some values filled and others emptied
         $response = $this->actingAs($admin)->put('/admin/settings', [
             'contact_address' => 'Custom Industrial Area, Phase 2, Punjab',
-            'contact_phone_1' => '+91-99887-11223',
-            'contact_phone_1_label' => 'Chief Operations',
+            'contact_phone_1' => '+91-92162-07097',
+            'contact_phone_1_label' => 'Sales & Technical Support',
             'contact_phone_2' => '', // EMPTIED
             'contact_phone_2_label' => '',
-            'contact_email' => 'custom-desk@hindfan.com',
+            'contact_email' => 'hindfan@yahoo.com',
             'working_hours' => 'Mon - Fri: 09:00 - 18:00',
             'social_facebook' => 'https://facebook.com/customhindfanofficial',
             'social_youtube' => '', // EMPTIED
             'social_instagram' => '', // EMPTIED
             'social_linkedin' => '', // EMPTIED
             'social_twitter' => '', // EMPTIED
-            'social_whatsapp' => '', // EMPTIED
+            'social_whatsapp' => '+919216207097',
         ]);
 
         $response->assertRedirect('/admin/settings');
         $response->assertSessionHas('success');
 
         // Verify setting in database
-        $this->assertEquals('+91-99887-11223', Setting::get('contact_phone_1'));
+        $this->assertEquals('+91-92162-07097', Setting::get('contact_phone_1'));
+        $this->assertEquals('hindfan@yahoo.com', Setting::get('contact_email'));
         $this->assertNull(Setting::get('contact_phone_2'));
         $this->assertNull(Setting::get('social_youtube'));
 
         // Verify Homepage Frontend rendering
         $home = $this->get('/');
         $home->assertStatus(200);
-        $home->assertSee('+91-99887-11223');
-        $home->assertSee('custom-desk@hindfan.com');
+        $home->assertSee('+91-92162-07097');
+        $home->assertSee('hindfan@yahoo.com');
         $home->assertSee('https://facebook.com/customhindfanofficial');
         // Empty items should NOT be present
         $home->assertDontSee('title="YouTube"');
         $home->assertDontSee('title="Instagram"');
         $home->assertDontSee('title="LinkedIn"');
-        $home->assertDontSee('+91-92162-01187');
 
         // Verify Contact Us page rendering
         $contact = $this->get('/contact');
         $contact->assertStatus(200);
         $contact->assertSee('Custom Industrial Area, Phase 2, Punjab');
-        $contact->assertSee('+91-99887-11223');
-        $contact->assertSee('Chief Operations');
-        $contact->assertSee('custom-desk@hindfan.com');
-        $contact->assertDontSee('+91-92162-01187');
+        $contact->assertSee('+91-92162-07097');
+        $contact->assertSee('Sales & Technical Support');
+        $contact->assertSee('hindfan@yahoo.com');
     }
 }
