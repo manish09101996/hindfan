@@ -29,6 +29,32 @@ class HindfanSystemTest extends TestCase
         $response->assertSee('सावधान', false);
     }
 
+    public function test_mobile_drawer_and_hero_banner_and_whatsapp_button_render()
+    {
+        $response = $this->get('/');
+        $response->assertStatus(200);
+
+        // 1. Mobile Drawer Navigation
+        $response->assertSee('id="mobileNavDrawer"', false);
+        $response->assertSee('data-bs-toggle="offcanvas"', false);
+        $response->assertSee('data-bs-target="#mobileNavDrawer"', false);
+        $response->assertSee('drawer-nav-link', false);
+
+        // 2. Hero Banner Elements
+        $response->assertSee('Engineered for Power.', false);
+        $response->assertSee('Built for Generations.', false);
+        $response->assertSee('View Our Products', false);
+        $response->assertSee('Request a Quote', false);
+        $response->assertSee('Download Brochure', false);
+        $response->assertSee('Years of Expertise', false);
+        $response->assertSee('Pure Copper Motors', false);
+        $response->assertSee('Original Brand HIND', false);
+
+        // 3. WhatsApp Floating Button
+        $response->assertSee('whatsapp-float-btn', false);
+        $response->assertSee('https://wa.me/919216207097', false);
+    }
+
     public function test_about_page_loads()
     {
         $response = $this->get('/about');

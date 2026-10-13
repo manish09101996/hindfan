@@ -7,7 +7,7 @@
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
         <div class="container position-relative">
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-7">
                     <div class="hero-badge">
                         <i class="fa fa-award"></i>
@@ -20,7 +20,7 @@
                     <p class="hero-subtitle text-muted">
                         Hindson Industries pioneers industrial pedestal fans, high-velocity horizontal circulators, and electrical Madhani churners since 1980. Crafted with 100% pure copper and heavy-duty double ball bearings for unmatched performance.
                     </p>
-                    <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                    <div class="hero-cta-group d-flex flex-wrap align-items-center gap-2 gap-sm-3 mb-4">
                         <a href="{{ route('portfolio') }}" class="btn-modern btn-primary-modern btn-lg-modern">
                             View Our Products <i class="fa fa-arrow-right ms-1"></i>
                         </a>
@@ -34,10 +34,10 @@
 
                     <!-- Industrial Key Stats (4 columns matching mockup) -->
                     <div class="hero-stats">
-                        <div class="row g-3">
+                        <div class="row g-2 g-sm-3">
                             <div class="col-6 col-sm-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="p-2 rounded-circle bg-danger-subtle text-danger"><i class="fa fa-award fs-5"></i></div>
+                                <div class="hero-stat-card d-flex align-items-center gap-2">
+                                    <div class="hero-stat-icon-box p-2 rounded-circle bg-danger-subtle text-danger flex-shrink-0"><i class="fa fa-award fs-5"></i></div>
                                     <div>
                                         <div class="hero-stat-number text-dark">40+</div>
                                         <div class="hero-stat-label">Years of Expertise</div>
@@ -45,8 +45,8 @@
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="p-2 rounded-circle bg-danger-subtle text-danger"><i class="fa fa-bolt fs-5"></i></div>
+                                <div class="hero-stat-card d-flex align-items-center gap-2">
+                                    <div class="hero-stat-icon-box p-2 rounded-circle bg-danger-subtle text-danger flex-shrink-0"><i class="fa fa-bolt fs-5"></i></div>
                                     <div>
                                         <div class="hero-stat-number text-dark">100%</div>
                                         <div class="hero-stat-label">Pure Copper Motors</div>
@@ -54,8 +54,8 @@
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="p-2 rounded-circle bg-danger-subtle text-danger"><i class="fa fa-fan fs-5"></i></div>
+                                <div class="hero-stat-card d-flex align-items-center gap-2">
+                                    <div class="hero-stat-icon-box p-2 rounded-circle bg-danger-subtle text-danger flex-shrink-0"><i class="fa fa-fan fs-5"></i></div>
                                     <div>
                                         <div class="hero-stat-number text-dark">{{ $totalProjectsCount }}+</div>
                                         <div class="hero-stat-label">Engineered Models</div>
@@ -63,8 +63,8 @@
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="p-2 rounded-circle bg-danger-subtle text-danger"><i class="fa fa-shield-halved fs-5"></i></div>
+                                <div class="hero-stat-card d-flex align-items-center gap-2">
+                                    <div class="hero-stat-icon-box p-2 rounded-circle bg-danger-subtle text-danger flex-shrink-0"><i class="fa fa-shield-halved fs-5"></i></div>
                                     <div>
                                         <div class="hero-stat-number text-dark">Trusted</div>
                                         <div class="hero-stat-label">Across India</div>
@@ -88,14 +88,14 @@
 
                         <!-- Brand Authenticity Badge -->
                         <div class="hero-floating-badge-clean">
-                            <div class="bg-primary text-white p-2 rounded-circle">
+                            <div class="bg-primary text-white p-2 rounded-circle flex-shrink-0">
                                 <i class="fa fa-shield-halved fs-5"></i>
                             </div>
                             <div>
-                                <div class="text-dark fw-bold small">Original Brand HIND</div>
+                                <div class="text-dark fw-bold small lh-1 mb-1">Original Brand HIND</div>
                                 <div class="text-muted" style="font-size: 0.72rem;">Double Ball Bearings • Pure Copper</div>
                             </div>
-                            <span class="badge bg-danger ms-2">PIONEER</span>
+                            <span class="badge bg-danger ms-auto flex-shrink-0">PIONEER</span>
                         </div>
                     </div>
                 </div>

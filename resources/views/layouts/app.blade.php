@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom Modern Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.3">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.4">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -147,11 +147,13 @@
                 </div>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMenu" aria-controls="mainNavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars fs-4 text-dark"></i>
+            <!-- Mobile Hamburger Button (Triggers Smooth Slide-Out Drawer from Right) -->
+            <button class="navbar-toggler border-0 shadow-none p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Open mobile menu">
+                <i class="fa fa-bars fs-3 text-dark"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbarMenu">
+            <!-- Desktop Navigation Menu (Visible on lg and above) -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNavbarMenu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link nav-link-modern {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
@@ -180,6 +182,99 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Slide-Out Navigation Drawer (Slides from Right) -->
+    <div class="offcanvas offcanvas-end mobile-side-drawer border-0" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+        <div class="offcanvas-header border-bottom py-3 px-3 px-sm-4 bg-white">
+            <a class="d-flex align-items-center gap-2 text-decoration-none" href="{{ route('home') }}" id="mobileNavDrawerLabel">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="Hindfan" style="height: 38px; width: auto; object-fit: contain;">
+                <div>
+                    <div class="fw-bold text-dark lh-1" style="font-size: 0.95rem; letter-spacing: -0.02em;">HINDSON INDUSTRIES</div>
+                    <small class="text-primary fw-semibold" style="font-size: 0.66rem; letter-spacing: 0.06em;">PREMIUM FANS SINCE 1980</small>
+                </div>
+            </a>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column p-0">
+            <div class="p-3 p-sm-4 flex-grow-1 overflow-y-auto">
+                <div class="text-uppercase text-muted fw-bold small mb-2 ps-1" style="font-size: 0.7rem; letter-spacing: 0.08em;">Navigation</div>
+                <ul class="nav flex-column gap-1 mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-house"></i></span>
+                            <span class="drawer-nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-industry"></i></span>
+                            <span class="drawer-nav-text">About Us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('services') || request()->routeIs('products') ? 'active' : '' }}" href="{{ route('services') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-fan"></i></span>
+                            <span class="drawer-nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('portfolio*') ? 'active' : '' }}" href="{{ route('portfolio') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-layer-group"></i></span>
+                            <span class="drawer-nav-text">Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('brochure') ? 'active' : '' }}" href="{{ route('brochure') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-file-pdf"></i></span>
+                            <span class="drawer-nav-text">Brochure</span>
+                            <span class="badge bg-danger-subtle text-danger ms-auto rounded-pill px-2 py-1" style="font-size: 0.68rem;">2026 PDF</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link drawer-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
+                            <span class="drawer-nav-icon"><i class="fa fa-envelope"></i></span>
+                            <span class="drawer-nav-text">Contact Us</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="text-uppercase text-muted fw-bold small mb-2 ps-1" style="font-size: 0.7rem; letter-spacing: 0.08em;">Quick Inquiries</div>
+                <div class="d-flex flex-column gap-2 mb-4">
+                    <a href="{{ route('contact') }}" class="btn-modern btn-primary-modern w-100 justify-content-center">
+                        <i class="fa fa-paper-plane"></i> Request a Quote
+                    </a>
+                    <a href="{{ route('brochure') }}" class="btn-modern btn-outline-dark-modern w-100 justify-content-center">
+                        <i class="fa fa-download"></i> Download 2026 Brochure
+                    </a>
+                </div>
+
+                <!-- Drawer Factory Support Card -->
+                <div class="p-3 rounded-3 bg-light border">
+                    <div class="fw-bold text-dark small mb-2 d-flex align-items-center gap-2">
+                        <i class="fa fa-headset text-danger"></i> Factory Sales &amp; Dealership
+                    </div>
+                    @if(site_setting('contact_phone_1'))
+                        <a href="tel:{{ preg_replace('/[^0-9+]/', '', site_setting('contact_phone_1')) }}" class="d-flex align-items-center gap-2 text-dark text-decoration-none small py-1">
+                            <i class="fa fa-phone text-muted" style="width: 16px;"></i>
+                            <span>{{ site_setting('contact_phone_1') }}</span>
+                        </a>
+                    @endif
+                    @if(site_setting('contact_email'))
+                        <a href="mailto:{{ site_setting('contact_email') }}" class="d-flex align-items-center gap-2 text-dark text-decoration-none small py-1">
+                            <i class="fa fa-envelope text-muted" style="width: 16px;"></i>
+                            <span>{{ site_setting('contact_email') }}</span>
+                        </a>
+                    @endif
+                    <a href="{{ whatsapp_url() }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success w-100 mt-2 d-inline-flex align-items-center justify-content-center gap-2 fw-semibold">
+                        <i class="fab fa-whatsapp fs-6"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="p-3 bg-white border-top text-center text-muted" style="font-size: 0.75rem;">
+                &copy; {{ date('Y') }} Hindson Industries &bull; Rampura Phul, Punjab
+            </div>
+        </div>
+    </div>
 
     <!-- Global Flash Feedback Notifications -->
     <div class="container pt-3">

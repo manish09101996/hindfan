@@ -15,6 +15,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // 1b. Mobile Offcanvas Drawer: Hide WhatsApp button & handle link interaction
+  const mobileNavDrawerEl = document.getElementById('mobileNavDrawer');
+  const whatsappFloatBtn = document.getElementById('whatsappFloatBtn');
+  if (mobileNavDrawerEl) {
+    mobileNavDrawerEl.addEventListener('show.bs.offcanvas', function () {
+      if (whatsappFloatBtn) {
+        whatsappFloatBtn.style.opacity = '0';
+        whatsappFloatBtn.style.pointerEvents = 'none';
+        whatsappFloatBtn.style.visibility = 'hidden';
+      }
+    });
+
+    mobileNavDrawerEl.addEventListener('hidden.bs.offcanvas', function () {
+      if (whatsappFloatBtn) {
+        whatsappFloatBtn.style.opacity = '';
+        whatsappFloatBtn.style.pointerEvents = '';
+        whatsappFloatBtn.style.visibility = '';
+      }
+    });
+
+    const drawerLinks = mobileNavDrawerEl.querySelectorAll('.drawer-nav-link');
+    drawerLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        try {
+          const offcanvasInstance = bootstrap.Offcanvas.getInstance(mobileNavDrawerEl);
+          if (offcanvasInstance) {
+            offcanvasInstance.hide();
+          }
+        } catch (e) {}
+      });
+    });
+  }
+
   // 2. Auto-dismiss flash alerts
   const flashAlerts = document.querySelectorAll('.alert-dismissible');
   flashAlerts.forEach((alert) => {
