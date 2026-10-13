@@ -118,9 +118,14 @@
                                         <span class="text-muted small">
                                             <i class="fa fa-eye me-1"></i> {{ number_format($project->views_count) }} views
                                         </span>
-                                        <a href="{{ route('portfolio.show', $project->slug) }}" class="btn-modern btn-primary-modern btn-sm-modern">
-                                            View Project <i class="fa fa-arrow-right"></i>
-                                        </a>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="{{ whatsapp_url('Hello Hindson Industries, I would like to enquire about ' . $project->title) }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-outline-modern btn-sm-modern px-2 text-success" title="Enquire on WhatsApp">
+                                                <i class="fab fa-whatsapp fs-6"></i>
+                                            </a>
+                                            <a href="{{ route('portfolio.show', $project->slug) }}" class="btn-modern btn-primary-modern btn-sm-modern">
+                                                View Model <i class="fa fa-arrow-right"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

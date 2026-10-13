@@ -162,18 +162,43 @@
                         </ul>
 
                         <div class="d-grid gap-2 pt-2 border-top">
+                            <a href="{{ whatsapp_url('Hello Hindson Industries, I would like to enquire about ' . $project->title) }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-whatsapp">
+                                <i class="fab fa-whatsapp me-1"></i> Enquire on WhatsApp
+                            </a>
                             <a href="{{ route('contact') }}?model={{ urlencode($project->title) }}" class="btn-modern btn-primary-modern">
-                                <i class="fa fa-envelope"></i> Request Quote for this Model
+                                <i class="fa fa-envelope me-1"></i> Request Quote for this Model
+                            </a>
+                            <a href="{{ route('brochure') }}" class="btn-modern btn-outline-dark-modern">
+                                <i class="fa fa-file-pdf me-1"></i> Download Product Brochure
                             </a>
                             @if(site_setting('contact_phone_1'))
                                 <a href="tel:{{ preg_replace('/[^0-9+]/', '', site_setting('contact_phone_1')) }}" class="btn-modern btn-outline-modern">
-                                    <i class="fa fa-phone"></i> Call {{ site_setting('contact_phone_1') }}
+                                    <i class="fa fa-phone me-1"></i> Call Direct: {{ site_setting('contact_phone_1') }}
                                 </a>
                             @endif
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Product Schema.org JSON-LD -->
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "name": "{{ addslashes($project->title) }}",
+              "image": "{{ $project->thumbnail_url }}",
+              "description": "{{ addslashes(strip_tags($project->short_description ?? $project->title)) }}",
+              "brand": {
+                "@type": "Brand",
+                "name": "HIND"
+              },
+              "manufacturer": {
+                "@type": "Organization",
+                "name": "Hindson Industries"
+              }
+            }
+            </script>
 
             <!-- Related Projects Grid -->
             @if ($relatedProjects->count() > 0)

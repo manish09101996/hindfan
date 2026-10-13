@@ -27,40 +27,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom Modern Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.2">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.3">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Hindson Industries - Hindfan",
-      "image": "{{ asset('assets/images/logo.png') }}",
-      "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
-      "email": "{{ site_setting('contact_email', 'info@hindfan.com') }}",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Near Gaushala, Phul Road",
-        "addressLocality": "Rampura Phul",
-        "addressRegion": "Punjab",
-        "postalCode": "151103",
-        "addressCountry": "IN"
-      },
-      "url": "http://hindfan.com",
-      "priceRange": "₹₹",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "19:00"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "{{ url('/') }}#organization",
+          "name": "Hindson Industries",
+          "alternateName": ["Hindfan", "Hind Industries"],
+          "url": "{{ url('/') }}",
+          "logo": "{{ asset('assets/images/logo.png') }}",
+          "foundingDate": "1980",
+          "description": "Leading Indian manufacturer of heavy-duty Pedestal Fans, Madhani churners, Tent Fans, Wall Mounting Fans, and Cooler Motors. ISO 9001:2015 certified.",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
+              "contactType": "sales",
+              "areaServed": "IN",
+              "availableLanguage": ["en", "hi", "pa"]
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "{{ url('/') }}#localbusiness",
+          "name": "Hindson Industries - Hindfan",
+          "image": "{{ asset('assets/images/logo.png') }}",
+          "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
+          "email": "{{ site_setting('contact_email', 'info@hindfan.com') }}",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Near Gaushala, Phul Road",
+            "addressLocality": "Rampura Phul",
+            "addressRegion": "Punjab",
+            "postalCode": "151103",
+            "addressCountry": "IN"
+          },
+          "url": "{{ url('/') }}",
+          "priceRange": "₹₹",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "19:00"
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -271,7 +288,7 @@
                                 <a href="{{ site_setting('social_twitter') }}" target="_blank" rel="noopener" class="footer-social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
                             @endif
                             @if(site_setting('social_whatsapp'))
-                                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', site_setting('social_whatsapp')) }}" target="_blank" rel="noopener" class="footer-social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="{{ whatsapp_url() }}" target="_blank" rel="noopener noreferrer" class="footer-social-icon text-success" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             @endif
                         </div>
                     @endif
@@ -362,11 +379,24 @@
                     &copy; {{ date('Y') }} <strong>Hindson Industries</strong>. All Rights Reserved.
                 </div>
                 <div class="text-light opacity-75">
-                    Pioneers in Fans &amp; Madhani Since 1980
+                    Pioneers in Heavy Duty Fans &amp; Madhani Since 1980 • Original Brand HIND
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Fixed Floating WhatsApp Button (Site-Wide) -->
+    <a href="{{ whatsapp_url() }}" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float-btn" 
+       id="whatsappFloatBtn" 
+       aria-label="Chat with us on WhatsApp" 
+       title="Chat with Hindson Industries on WhatsApp">
+        <span class="whatsapp-float-tooltip">Chat with us on WhatsApp</span>
+        <span class="whatsapp-float-pulse"></span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Bootstrap 5.3.3 Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

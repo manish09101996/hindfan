@@ -99,6 +99,20 @@
                                 </div>
                             </div>
                         @endif
+
+                        <!-- Direct WhatsApp Chat Card -->
+                        <div class="p-3 bg-success-subtle rounded-3 border border-success-subtle d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="text-success fs-3"><i class="fab fa-whatsapp"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Instant WhatsApp Chat</h6>
+                                    <small class="text-muted">Direct sales &amp; technical desk</small>
+                                </div>
+                            </div>
+                            <a href="{{ whatsapp_url() }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-whatsapp btn-sm-modern">
+                                Chat Now <i class="fa fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

@@ -20,9 +20,12 @@
                     <p class="hero-subtitle text-muted">
                         Hindson Industries pioneers industrial pedestal fans, high-velocity horizontal circulators, and electrical Madhani churners since 1980. Crafted with 100% pure copper and heavy-duty double ball bearings for unmatched performance.
                     </p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
                         <a href="{{ route('portfolio') }}" class="btn-modern btn-primary-modern btn-lg-modern">
                             View Our Products <i class="fa fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="{{ route('contact') }}" class="btn-modern btn-dark-modern btn-lg-modern">
+                            <i class="fa fa-paper-plane me-1"></i> Request a Quote
                         </a>
                         <a href="{{ route('brochure') }}" class="btn-modern btn-outline-dark-modern btn-lg-modern">
                             <i class="fa fa-download me-1"></i> Download Brochure
@@ -362,9 +365,14 @@
                                     <span class="text-muted small">
                                         <i class="fa fa-eye me-1"></i> {{ number_format($project->views_count) }} views
                                     </span>
-                                    <a href="{{ route('portfolio.show', $project->slug) }}" class="btn-modern btn-primary-modern btn-sm-modern">
-                                        View Project <i class="fa fa-arrow-right"></i>
-                                    </a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="{{ whatsapp_url('Hello Hindson Industries, I would like to enquire about ' . $project->title) }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-outline-modern btn-sm-modern px-2 text-success" title="Enquire on WhatsApp">
+                                            <i class="fab fa-whatsapp fs-6"></i>
+                                        </a>
+                                        <a href="{{ route('portfolio.show', $project->slug) }}" class="btn-modern btn-primary-modern btn-sm-modern">
+                                            View Model <i class="fa fa-arrow-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -506,6 +514,41 @@
                                 <small class="text-muted">Jain Electricals, Ludhiana</small>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Industrial B2B Wholesale & Dealership CTA Banner -->
+    <section class="industrial-cta-banner py-5">
+        <div class="cta-pattern"></div>
+        <div class="container py-lg-4 position-relative">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-danger px-3 py-2 text-uppercase mb-3 fw-semibold">
+                        <i class="fa fa-handshake me-1"></i> Direct Manufacturer Wholesale &amp; Dealerships
+                    </span>
+                    <h2 class="display-6 fw-bold text-white mb-3">
+                        Partner with North India's Leading Fan &amp; Madhani Manufacturer
+                    </h2>
+                    <p class="text-white-50 lead mb-0">
+                        Hindson Industries supplies electrical distributors, wedding event decorators, dairy cooperatives, and industrial facilities nationwide. Prompt factory dispatch, 100% original copper guarantee, and verified after-sales service.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-lg-end">
+                        <a href="{{ route('contact') }}" class="btn-modern btn-primary-modern btn-lg-modern">
+                            <i class="fa fa-envelope me-1"></i> Request a Factory Quote
+                        </a>
+                        <a href="{{ whatsapp_url('Hello Hindson Industries, I would like to inquire about bulk ordering and dealership opportunities.') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-whatsapp btn-lg-modern">
+                            <i class="fab fa-whatsapp me-1"></i> WhatsApp Sales Desk
+                        </a>
+                        @if(site_setting('contact_phone_1'))
+                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', site_setting('contact_phone_1')) }}" class="btn-modern btn-outline-dark-modern text-white border-white-50 btn-lg-modern">
+                                <i class="fa fa-phone me-1"></i> Call {{ site_setting('contact_phone_1') }}
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>
