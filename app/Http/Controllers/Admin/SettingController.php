@@ -31,6 +31,7 @@ class SettingController extends Controller
             'contact_phone_2_label' => 'nullable|string|max:100',
             'contact_email' => 'nullable|email|max:150',
             'working_hours' => 'nullable|string|max:200',
+            'google_maps_link' => 'nullable|url|max:500',
 
             'social_facebook' => 'nullable|url|max:255',
             'social_youtube' => 'nullable|url|max:255',
@@ -49,6 +50,7 @@ class SettingController extends Controller
                 'contact_phone_2_label',
                 'contact_email',
                 'working_hours',
+                'google_maps_link',
             ],
             'social' => [
                 'social_facebook',

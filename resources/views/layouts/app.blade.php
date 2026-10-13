@@ -59,11 +59,12 @@
           "name": "Hindson Industries - Hindfan",
           "image": "{{ asset('assets/images/logo.png') }}",
           "telephone": "{{ site_setting('contact_phone_1', '+91-92162-07097') }}",
-          "email": "{{ site_setting('contact_email', 'hindfan@yahoo.com') }}",
+          "hasMap": "{{ site_setting('google_maps_link', 'https://www.google.com/maps?cid=557396234949805422') }}",
+          "email": "{{ site_setting('contact_email', 'info@hindfan.com') }}",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Near Gaushala, Phul Road",
-            "addressLocality": "Rampura Phul",
+            "addressLocality": "Rampura Phul, Distt. Bathinda",
             "addressRegion": "Punjab",
             "postalCode": "151103",
             "addressCountry": "IN"

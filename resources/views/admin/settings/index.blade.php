@@ -95,12 +95,21 @@
                         </div>
 
                         <!-- Working Hours -->
-                        <div class="mb-2">
+                        <div class="mb-4">
                             <label for="working_hours" class="form-label fw-semibold text-secondary">
                                 <i class="fa fa-clock text-danger me-1"></i> Factory &amp; Office Working Hours
                             </label>
                             <input type="text" name="working_hours" id="working_hours" class="form-control" placeholder="e.g. Mon - Sat: 08:00 - 19:00" value="{{ old('working_hours', $settings['working_hours'] ?? '') }}">
                             <small class="text-muted">Khali chhodne par working hours timing hide ho jayegi.</small>
+                        </div>
+
+                        <!-- Google Maps Location Link -->
+                        <div class="mb-2">
+                            <label for="google_maps_link" class="form-label fw-semibold text-secondary">
+                                <i class="fa fa-map-location-dot text-danger me-1"></i> Google Maps Place Link / CID URL
+                            </label>
+                            <input type="url" name="google_maps_link" id="google_maps_link" class="form-control" placeholder="https://www.google.com/maps?cid=557396234949805422" value="{{ old('google_maps_link', $settings['google_maps_link'] ?? '') }}">
+                            <small class="text-muted">Contact page par Google Maps directions aur embedded map ke liye use hoga.</small>
                         </div>
                     </div>
                 </div>

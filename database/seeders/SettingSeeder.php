@@ -35,11 +35,15 @@ class SettingSeeder extends Seeder
                 'group' => 'contact',
             ],
             'contact_email' => [
-                'value' => 'hindfan@yahoo.com',
+                'value' => 'info@hindfan.com',
                 'group' => 'contact',
             ],
             'working_hours' => [
                 'value' => 'Mon - Sat: 08:00 - 19:00',
+                'group' => 'contact',
+            ],
+            'google_maps_link' => [
+                'value' => 'https://www.google.com/maps?cid=557396234949805422',
                 'group' => 'contact',
             ],
 

@@ -37,9 +37,16 @@
                                 <div class="text-primary fs-4 mt-1"><i class="fa fa-map-location-dot"></i></div>
                                 <div>
                                     <h6 class="fw-bold mb-1 text-dark">Manufacturing Plant</h6>
-                                    <p class="text-muted small mb-0">
+                                    <p class="text-muted small mb-1">
                                         {!! nl2br(e(site_setting('contact_address'))) !!}
                                     </p>
+                                    @if(site_setting('google_maps_link'))
+                                        <div>
+                                            <a href="{{ site_setting('google_maps_link') }}" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold small text-decoration-underline">
+                                                <i class="fa fa-location-arrow me-1"></i> Get Directions on Google Maps
+                                            </a>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         @endif
@@ -189,10 +196,23 @@
                 </div>
             </div>
 
-            <!-- Google Maps Embed for Rampura Phul -->
+            <!-- Google Maps Embed for Hindson Industries (Near Gaushala, Phul Road) -->
             <div class="mt-5 pt-4">
-                <div class="rounded-4 overflow-hidden shadow-sm border" style="height: 380px;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13778.681643916739!2d75.2285324!3d30.2749455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910c2269a23d8c1%3A0xc3b865e9034ff9cf!2sRampura%20Phul%2C%20Punjab%20151103!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                    <div>
+                        <h4 class="fw-bold mb-1 text-dark"><i class="fa fa-map-location-dot text-danger me-2"></i> Factory Location on Google Maps</h4>
+                        <p class="text-muted small mb-0">{{ site_setting('contact_address', 'Near Gaushala, Phul Road, Rampura Phul, Distt. Bathinda, Punjab - 151103') }}</p>
+                    </div>
+                    @if(site_setting('google_maps_link'))
+                        <div class="mt-1 mt-sm-0">
+                            <a href="{{ site_setting('google_maps_link') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-outline-dark-modern btn-sm-modern">
+                                <i class="fa fa-arrow-up-right-from-square me-1"></i> Open in Google Maps
+                            </a>
+                        </div>
+                    @endif
+                </div>
+                <div class="rounded-4 overflow-hidden shadow-sm border" style="height: 400px;">
+                    <iframe src="https://maps.google.com/maps?cid=557396234949805422&output=embed" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
