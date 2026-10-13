@@ -19,7 +19,7 @@
     <!-- Company Heritage -->
     <section class="py-5 bg-white">
         <div class="container py-lg-4">
-            <div class="row g-5 align-items-center">
+            <div class="row g-4 g-lg-5 align-items-center">
                 <div class="col-lg-6">
                     <span class="section-tag">
                         <i class="fa fa-history"></i> Established in 1980

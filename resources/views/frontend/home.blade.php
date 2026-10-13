@@ -80,8 +80,8 @@
                         <div class="hero-fan-backdrop"></div>
                         <img src="{{ asset('assets/images/products/pedestal_fan_26.jpg') }}" alt="Hindfan 26 Inch Industrial Pedestal Fan" class="hero-fan-img" onerror="this.onerror=null; this.src='{{ asset('assets/images/products/pedestal_fan_chidhi.jpg') }}';">
                         
-                        <!-- Calligraphy script accent matching reference mockup -->
-                        <div class="hero-script-tag d-none d-sm-block">
+                        <!-- Calligraphy script accent matching reference mockup (Desktop only) -->
+                        <div class="hero-script-tag d-none d-lg-block">
                             Reliable Performance
                             <span class="script-accent">Since 1980</span>
                         </div>
@@ -106,7 +106,7 @@
     <!-- 2. About Company & Founders Section -->
     <section class="py-5 bg-white">
         <div class="container py-lg-4">
-            <div class="row g-5 align-items-center">
+            <div class="row g-4 g-lg-5 align-items-center">
                 <div class="col-lg-7">
                     <span class="section-tag">
                         <i class="fa fa-industry"></i> About Hindson Industries
@@ -437,7 +437,7 @@
                             </a>
                         </div>
                         <div class="mt-3 text-muted small">
-                            <i class="fa fa-link me-1"></i> Direct PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace">/assets/images/Brochure/Brochure%202026.pdf</a>
+                            <i class="fa fa-link me-1"></i> Direct PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace" style="word-break: break-all;">/assets/images/Brochure/Brochure%202026.pdf</a>
                         </div>
                     </div>
                     <div class="col-lg-4 text-center">

@@ -38,7 +38,7 @@
     <!-- Main Project Detail Content -->
     <section class="py-5 bg-white">
         <div class="container py-lg-4">
-            <div class="row g-5">
+            <div class="row g-4 g-lg-5">
                 <!-- Left Column: Gallery & Description -->
                 <div class="col-lg-8">
                     <!-- Main Image Showcase -->

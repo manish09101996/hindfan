@@ -19,7 +19,7 @@
     <!-- Main Contact Section -->
     <section class="py-5 bg-white">
         <div class="container py-lg-4">
-            <div class="row g-5">
+            <div class="row g-4 g-lg-5">
                 <!-- Left: Factory & Contact Details -->
                 <div class="col-lg-5">
                     <span class="section-tag">

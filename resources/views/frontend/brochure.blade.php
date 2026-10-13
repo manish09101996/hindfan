@@ -111,7 +111,7 @@
                         </div>
 
                         <div class="text-muted small">
-                            <i class="fa fa-link me-1"></i> PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace">/assets/images/Brochure/Brochure%202026.pdf</a>
+                            <i class="fa fa-link me-1"></i> PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace" style="word-break: break-all;">/assets/images/Brochure/Brochure%202026.pdf</a>
                         </div>
                     </div>
                 </div>

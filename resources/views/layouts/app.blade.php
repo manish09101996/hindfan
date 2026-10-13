@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom Modern Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.4">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.6">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -83,8 +83,8 @@
 </head>
 <body>
 
-    <!-- Topbar -->
-    <div class="topbar-modern d-none d-md-block">
+    <!-- Topbar (Visible on large screens only to prevent tablet/mobile horizontal overflow) -->
+    <div class="topbar-modern d-none d-lg-block">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center gap-4">
@@ -185,15 +185,15 @@
 
     <!-- Mobile Slide-Out Navigation Drawer (Slides from Right) -->
     <div class="offcanvas offcanvas-end mobile-side-drawer border-0" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
-        <div class="offcanvas-header border-bottom py-3 px-3 px-sm-4 bg-white">
-            <a class="d-flex align-items-center gap-2 text-decoration-none" href="{{ route('home') }}" id="mobileNavDrawerLabel">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Hindfan" style="height: 38px; width: auto; object-fit: contain;">
-                <div>
-                    <div class="fw-bold text-dark lh-1" style="font-size: 0.95rem; letter-spacing: -0.02em;">HINDSON INDUSTRIES</div>
-                    <small class="text-primary fw-semibold" style="font-size: 0.66rem; letter-spacing: 0.06em;">PREMIUM FANS SINCE 1980</small>
+        <div class="offcanvas-header border-bottom py-3 px-3 bg-white">
+            <a class="d-flex align-items-center gap-2 text-decoration-none" href="{{ route('home') }}" id="mobileNavDrawerLabel" style="min-width: 0; flex: 1 1 auto; overflow: hidden;">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="Hindfan" style="height: 36px; width: auto; object-fit: contain; flex-shrink: 0;">
+                <div style="min-width: 0; overflow: hidden;">
+                    <div class="fw-bold text-dark lh-1 text-truncate" style="font-size: 0.9rem; letter-spacing: -0.02em;">HINDSON INDUSTRIES</div>
+                    <small class="text-primary fw-semibold d-block text-truncate" style="font-size: 0.65rem; letter-spacing: 0.05em;">PREMIUM FANS SINCE 1980</small>
                 </div>
             </a>
-            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+            <button type="button" class="btn-close text-reset shadow-none flex-shrink-0 ms-2" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column p-0">
             <div class="p-3 p-sm-4 flex-grow-1 overflow-y-auto">
