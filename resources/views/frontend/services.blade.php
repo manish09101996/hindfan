@@ -250,6 +250,25 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 2026 Product Brochure Download Callout -->
+            <div class="mt-5 p-4 p-md-5 bg-light rounded-4 border text-center shadow-sm">
+                <span class="badge bg-danger-subtle text-danger fw-bold px-3 py-2 rounded-pill mb-3">NEW 2026 EDITION</span>
+                <h3 class="fw-bold mb-2">Download Official Hindson Industries Product Brochure 2026</h3>
+                <p class="text-muted mb-4 max-w-600 mx-auto" style="max-width: 650px;">
+                    Get our comprehensive 31-page technical guide with full specifications, electrical ratings, dimensions, and dealer guidelines for all fans, churners, and motors.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-primary-modern">
+                        <i class="fa fa-eye me-2"></i> View Brochure
+                    </a>
+                    <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" download="Hindson_Industries_Brochure_2026.pdf" class="btn-modern btn-dark-modern">
+                        <i class="fa fa-download me-2"></i> Download Brochure
+                    </a>
+                    <a href="{{ route('brochure') }}" class="btn-modern btn-outline-dark-modern">
+                        <i class="fa fa-book-open me-2"></i> Brochure Details
+                    </a>
+                </div>
             </div>
         </div>
     </section>

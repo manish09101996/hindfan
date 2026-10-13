@@ -386,6 +386,76 @@
         </div>
     </section>
 
+    <!-- Product Brochure 2026 Section -->
+    <section class="py-5 bg-light border-top border-bottom" id="brochure-section">
+        <div class="container py-lg-4">
+            <div class="p-4 p-lg-5 bg-white rounded-4 border shadow-sm">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-danger-subtle text-danger rounded-pill fw-semibold small mb-3">
+                            <i class="fa fa-file-pdf"></i> NEW RELEASE • 2026 EDITION
+                        </div>
+                        <h2 class="display-6 fw-bold text-dark mb-2">Product Brochure 2026</h2>
+                        <p class="text-muted lead mb-4">
+                            Explore our comprehensive 31-page technical catalog featuring our entire lineup of heavy-duty Pedestal Fans, electrical Madhani churners, Tent &amp; Event fans, Fresh Air fans, Transair exhausts, and 110 Dia Cooler Motors.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-danger"></i>
+                                    <span class="text-dark small fw-semibold">31 Full-Color Technical Pages</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-danger"></i>
+                                    <span class="text-dark small fw-semibold">28+ Verified Engineering Models</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-danger"></i>
+                                    <span class="text-dark small fw-semibold">1400 RPM &amp; Pure Copper Specs</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-danger"></i>
+                                    <span class="text-dark small fw-semibold">ISO 9001:2015 Quality Tested</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center gap-3">
+                            <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-primary-modern btn-lg-modern">
+                                <i class="fa fa-eye me-2"></i> View Brochure
+                            </a>
+                            <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" download="Hindson_Industries_Brochure_2026.pdf" class="btn-modern btn-dark-modern btn-lg-modern">
+                                <i class="fa fa-download me-2"></i> Download Brochure
+                            </a>
+                            <a href="{{ whatsapp_url('Hello Hindson Industries, please send me the new 2026 Product Brochure PDF.') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-whatsapp btn-lg-modern">
+                                <i class="fab fa-whatsapp me-2"></i> Get on WhatsApp
+                            </a>
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fa fa-link me-1"></i> Direct PDF Path: <a href="{{ asset('assets/images/Brochure/Brochure%202026.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-secondary font-monospace">/assets/images/Brochure/Brochure%202026.pdf</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="p-4 rounded-4 bg-light border d-inline-flex flex-column align-items-center justify-content-center shadow-sm" style="width: 220px; height: 280px; border-top: 6px solid #C8102E !important;">
+                            <div class="bg-danger text-white p-3 rounded-circle mb-3 shadow-sm">
+                                <i class="fa fa-file-pdf fs-1"></i>
+                            </div>
+                            <div class="fw-bold text-dark lh-sm text-uppercase small">HINDSON INDUSTRIES</div>
+                            <div class="text-danger fw-bold fs-5">BROCHURE 2026</div>
+                            <div class="text-muted small mt-1">31 Pages • 27.8 MB</div>
+                            <span class="badge bg-danger mt-3 px-3 py-1">OFFICIAL PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 5. Why Choose Us Section -->
     <section class="py-5 text-white position-relative overflow-hidden" style="background-color: #20252B !important;">
         <div class="container py-lg-4 position-relative">

@@ -168,9 +168,14 @@
                             <a href="{{ route('contact') }}?model={{ urlencode($project->title) }}" class="btn-modern btn-primary-modern">
                                 <i class="fa fa-envelope me-1"></i> Request Quote for this Model
                             </a>
-                            <a href="{{ route('brochure') }}" class="btn-modern btn-outline-dark-modern">
-                                <i class="fa fa-file-pdf me-1"></i> Download Product Brochure
-                            </a>
+                            <div class="d-flex gap-2">
+                                <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-outline-dark-modern flex-grow-1 text-center" title="View Brochure in new tab">
+                                    <i class="fa fa-eye me-1"></i> View Brochure
+                                </a>
+                                <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" download="Hindson_Industries_Brochure_2026.pdf" class="btn-modern btn-outline-dark-modern flex-grow-1 text-center" title="Download Brochure PDF">
+                                    <i class="fa fa-download me-1"></i> Download PDF
+                                </a>
+                            </div>
                             @if(site_setting('contact_phone_1'))
                                 <a href="tel:{{ preg_replace('/[^0-9+]/', '', site_setting('contact_phone_1')) }}" class="btn-modern btn-outline-modern">
                                     <i class="fa fa-phone me-1"></i> Call Direct: {{ site_setting('contact_phone_1') }}

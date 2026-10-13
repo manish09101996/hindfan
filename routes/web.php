@@ -44,6 +44,26 @@ Route::get('/gallery', function () {
 // Brochure
 Route::get('/brochure', [PageController::class, 'brochure'])->name('brochure');
 
+// Direct Brochure 2026 Access and Download
+Route::get('/assets/images/Brochure/Brochure 2026.pdf', function () {
+    $path = public_path('assets/images/Brochure/Brochure 2026.pdf');
+    if (file_exists($path)) {
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="Brochure 2026.pdf"'
+        ]);
+    }
+    abort(404);
+});
+
+Route::get('/download-brochure', function () {
+    $path = public_path('assets/images/Brochure/Brochure 2026.pdf');
+    if (file_exists($path)) {
+        return response()->download($path, 'Hindson_Industries_Brochure_2026.pdf');
+    }
+    abort(404);
+})->name('brochure.download');
+
 // Contact Us (supports /contact and legacy /ask-us)
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/ask-us', [ContactController::class, 'index']);

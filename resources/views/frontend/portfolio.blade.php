@@ -11,8 +11,20 @@
                     <li class="breadcrumb-item active text-white" aria-current="page">Portfolio</li>
                 </ol>
             </nav>
-            <h1 class="display-5 fw-bold text-white mb-2">Portfolio &amp; Product Gallery</h1>
-            <p class="lead text-white-50 mb-0">Browse our dynamic portfolio of industrial fans, dairy churners, and custom ventilation engineering.</p>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <div>
+                    <h1 class="display-5 fw-bold text-white mb-2">Portfolio &amp; Product Gallery</h1>
+                    <p class="lead text-white-50 mb-0">Browse our dynamic portfolio of industrial fans, dairy churners, and custom ventilation engineering.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" target="_blank" rel="noopener noreferrer" class="btn-modern btn-primary-modern">
+                        <i class="fa fa-eye me-1"></i> View 2026 Brochure
+                    </a>
+                    <a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" download="Hindson_Industries_Brochure_2026.pdf" class="btn-modern btn-outline-modern text-white border-white">
+                        <i class="fa fa-download me-1"></i> Download PDF
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 

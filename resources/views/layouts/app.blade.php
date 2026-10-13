@@ -302,7 +302,8 @@
                         <li><a href="{{ route('about') }}"><i class="fa fa-chevron-right"></i> About Us</a></li>
                         <li><a href="{{ route('services') }}"><i class="fa fa-chevron-right"></i> Products</a></li>
                         <li><a href="{{ route('portfolio') }}"><i class="fa fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="{{ route('brochure') }}"><i class="fa fa-chevron-right"></i> Brochure</a></li>
+                        <li><a href="{{ route('brochure') }}"><i class="fa fa-chevron-right"></i> Brochure 2026</a></li>
+                        <li><a href="{{ asset('assets/images/Brochure/Brochure 2026.pdf') }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf text-danger"></i> Download PDF (2026)</a></li>
                         <li><a href="{{ route('contact') }}"><i class="fa fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
@@ -311,10 +312,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="footer-links-title">Product Lines</h5>
                     <ul class="footer-links-list">
-                        <li><a href="{{ route('portfolio', ['category' => 'pedestal-fans']) }}"><i class="fa fa-chevron-right"></i> Pedestal Fans (CHIDHI 21")</a></li>
+                        <li><a href="{{ route('portfolio', ['category' => 'pedestal-fans']) }}"><i class="fa fa-chevron-right"></i> Pedestal Fans (CHIDHI, AIRKING)</a></li>
                         <li><a href="{{ route('portfolio', ['category' => 'madhani-churners']) }}"><i class="fa fa-chevron-right"></i> Madhani Churners (3-80 KG)</a></li>
-                        <li><a href="{{ route('portfolio', ['category' => 'tent-event-fans']) }}"><i class="fa fa-chevron-right"></i> Tent &amp; Clump Fans</a></li>
+                        <li><a href="{{ route('portfolio', ['category' => 'tent-event-fans']) }}"><i class="fa fa-chevron-right"></i> Tent Fans &amp; 30" Tent Coolers</a></li>
                         <li><a href="{{ route('portfolio', ['category' => 'wall-mounting-fans']) }}"><i class="fa fa-chevron-right"></i> Wall &amp; Bracket Fans</a></li>
+                        <li><a href="{{ route('portfolio', ['category' => 'ceiling-exhaust-fans']) }}"><i class="fa fa-chevron-right"></i> Fresh Air &amp; Transair Exhaust</a></li>
                         <li><a href="{{ route('portfolio', ['category' => 'water-mist-fans']) }}"><i class="fa fa-chevron-right"></i> Water Mist Cooling Fans</a></li>
                         <li><a href="{{ route('portfolio', ['category' => 'cooler-motors']) }}"><i class="fa fa-chevron-right"></i> 110 Dia Cooler Motors</a></li>
                     </ul>
