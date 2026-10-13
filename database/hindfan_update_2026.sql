@@ -1,0 +1,207 @@
+-- ============================================================================
+-- HINDSON INDUSTRIES - INCREMENTAL UPDATE SQL (BROCHURE 2026)
+-- Sirf nayi missing categories aur 12 missing products ka data
+-- Existing tables aur purane products (IDs 1-16) ko drop ya overwrite nahi karega.
+-- Duplicate rokne ke liye INSERT IGNORE use kiya gaya hai.
+-- ============================================================================
+
+-- Step 1: Ensure Category 7 (Ceiling & Exhaust Fans) exists
+INSERT IGNORE INTO `categories` (`id`, `name`, `slug`, `description`, `display_order`, `is_active`, `created_at`, `updated_at`) VALUES
+(7, 'Ceiling & Exhaust Fans', 'ceiling-exhaust-fans', 'Aero-dynamically balanced industrial ceiling fans and exhaust solutions for warehouses, workshops, and halls.', 7, 1, NOW(), NOW());
+
+-- Step 2: Insert the 12 Missing Products from Brochure 2026
+INSERT IGNORE INTO `projects` 
+(`category_id`, `title`, `slug`, `short_description`, `description`, `thumbnail`, `alt_text`, `client_name`, `completion_date`, `external_url`, `technologies`, `meta_title`, `meta_description`, `is_featured`, `status`, `display_order`, `views_count`, `created_at`, `updated_at`) 
+VALUES
+
+-- 1. AIRKING 500 mm (20") Pedestal Fan (Brochure Page 3)
+(1, 
+'AIRKING 500 mm (20") High-Velocity Pedestal Fan', 
+'airking-500-mm-high-velocity-pedestal-fan', 
+'Engineered 500 mm (20-inch) high-velocity pedestal fan with 100% pure copper motor and close-mesh safety grill.', 
+'<p>The <strong>AIRKING 500 mm (20") Pedestal Fan</strong> is engineered by Hindson Industries for demanding industrial and commercial airflow requirements. Designed with a high-torque 100% copper winding motor, this model delivers superior velocity and extended air throw while maintaining energy efficiency.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 500 mm / 20 inches</li><li><strong>Power Consumption:</strong> 140 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> 100% Pure Copper Winding with Heavy-Duty Bearings</li><li><strong>Blade:</strong> Dynamically Balanced 500 mm Aerodynamic Aluminium Blade</li><li><strong>Guard:</strong> Heavy-gauge safety wire grill with anti-rust coating</li><li><strong>Base:</strong> Heavy cast iron circular base for vibration-free stability</li><li><strong>Height:</strong> Telescopic height adjustment</li></ul>', 
+'assets/images/products/pedestal_fan_airking_500mm.jpg', 
+'Hindfan AIRKING 500 mm 20 Inch Pedestal Fan', 
+'Industrial Sheds, Workshops & Commercial Spaces', 
+'2026-01-01', 
+'http://hindfan.com', 
+'500 mm (20"), 140W, 1400 RPM, 100% Copper, Double Bearings, Cast Iron Base', 
+'AIRKING 500 mm (20") Pedestal Fan | Hindfan Manufacturer', 
+'Buy Hindson Industries AIRKING 500 mm 20 inch heavy-duty pedestal fan. 100% copper double ball bearing motor, 1400 RPM, cast iron base.', 
+1, 'published', 17, 620, NOW(), NOW()),
+
+-- 2. SILVERLINE 21" Pedestal Fan (Brochure Page 4)
+(1, 
+'SILVERLINE 21" Heavy Duty Industrial Pedestal Fan', 
+'silverline-21-heavy-duty-industrial-pedestal-fan', 
+'Heavy-duty 21-inch industrial pedestal fan with premium silverline finish, 160W copper motor, and high-velocity airflow.', 
+'<p>The <strong>SILVERLINE 21" Pedestal Fan</strong> is a cornerstone industrial circulator from Hindson Industries. Built with high-grade components, double ball bearings, and a robust motor assembly, it delivers continuous heavy airflow across large industrial spaces and outdoor venues.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 21 inches (530 mm)</li><li><strong>Power Consumption:</strong> 160 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> 100% Pure Electrolytic Copper, Dual Ball Bearings</li><li><strong>Blade:</strong> Precision Aerodynamic Aluminium 3-Leaf Blades</li><li><strong>Guard:</strong> Heavy-duty close-mesh safety grill with corrosion-resistant finish</li><li><strong>Base:</strong> Heavy round base for maximum stability</li></ul>', 
+'assets/images/products/pedestal_fan_silverline_21.jpg', 
+'Hindfan SILVERLINE 21 inch Pedestal Fan', 
+'Factories, Banquet Halls & Commercial Venues', 
+'2026-01-01', 
+'http://hindfan.com', 
+'21 Inch Sweep, 160W, 1400 RPM, Pure Copper Motor, Double Ball Bearings, Aluminium Blades', 
+'SILVERLINE 21" Heavy Duty Pedestal Fan | Hindson Industries', 
+'Hindfan SILVERLINE 21 inch industrial pedestal fan. 160W pure copper motor, 1400 RPM, double ball bearings.', 
+1, 'published', 18, 580, NOW(), NOW()),
+
+-- 3. SILVERLINE 23" Pedestal Fan (Brochure Page 5)
+(1, 
+'SILVERLINE 23" Industrial Air Circulator Pedestal Fan', 
+'silverline-23-industrial-air-circulator-pedestal-fan', 
+'Industrial-grade 23-inch pedestal fan delivering expansive air sweep with an 180W double-bearing copper motor.', 
+'<p>The <strong>SILVERLINE 23" Pedestal Fan</strong> expands coverage for wide workshops, banquet pandals, and assembly floors. Engineered for non-stop endurance with thermal-resistant copper winding and heavy-duty steel construction.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 23 inches (585 mm)</li><li><strong>Power Consumption:</strong> 180 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> 100% Pure Copper Winding, Double Heavy-Duty Bearings</li><li><strong>Blade:</strong> Dynamically Balanced High-Tensile Aluminium Blades</li><li><strong>Base:</strong> Heavy cast iron round base</li><li><strong>Height:</strong> Adjustable telescopic stand with positive locking collar</li></ul>', 
+'assets/images/products/pedestal_fan_silverline_23.jpg', 
+'Hindfan SILVERLINE 23 inch Pedestal Fan', 
+'Assembly Plants & Event Organizers', 
+'2026-01-01', 
+'http://hindfan.com', 
+'23 Inch Sweep, 180W, 1400 RPM, 100% Copper, Cast Iron Base, Telescopic Stand', 
+'SILVERLINE 23" Pedestal Fan | Hindson Industries', 
+'Hindfan SILVERLINE 23 inch commercial air circulator. 180W copper motor, 1400 RPM, cast iron base.', 
+0, 'published', 19, 490, NOW(), NOW()),
+
+-- 4. ECONOMY 21" Pedestal Fan (Brochure Page 6)
+(1, 
+'ECONOMY 21" Cost-Effective Industrial Pedestal Fan', 
+'economy-21-cost-effective-industrial-pedestal-fan', 
+'High-value 21-inch commercial pedestal fan offering dependable air throw at low operational wattage.', 
+'<p>The <strong>ECONOMY 21" Pedestal Fan</strong> provides industrial cooling performance at an accessible price point for small businesses, shops, and budget installations without sacrificing Hindfan build quality.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 21 inches (530 mm)</li><li><strong>Power Consumption:</strong> 150 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> High-efficiency motor with dual ball bearings</li><li><strong>Blade:</strong> Balanced aluminium blades</li><li><strong>Base:</strong> Heavy-gauge stable base</li></ul>', 
+'assets/images/products/pedestal_fan_economy_21.jpg', 
+'Hindfan ECONOMY 21 inch Pedestal Fan', 
+'Shops, Small Workshops & Agricultural Units', 
+'2026-01-01', 
+'http://hindfan.com', 
+'21 Inch Sweep, 150W, 1400 RPM, Dual Bearings, Balanced Blades', 
+'ECONOMY 21" Pedestal Fan | Hindson Industries', 
+'ECONOMY 21 inch pedestal fan by Hindfan. Low power consumption, 1400 RPM, high-value industrial cooling.', 
+0, 'published', 20, 430, NOW(), NOW()),
+
+-- 5. ECONOMY 23" Pedestal Fan (Brochure Page 7)
+(1, 
+'ECONOMY 23" Heavy-Duty Commercial Pedestal Fan', 
+'economy-23-heavy-duty-commercial-pedestal-fan', 
+'Dependable 23-inch commercial pedestal fan designed for expansive air spread in warehouses and event venues.', 
+'<p>The <strong>ECONOMY 23" Pedestal Fan</strong> offers broad air circulation for budget-conscious commercial installations, event spaces, and community halls with Hindfan reliability.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 23 inches (585 mm)</li><li><strong>Power Consumption:</strong> 170 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> Heavy duty motor with ball bearings</li><li><strong>Blade:</strong> Aerodynamic aluminium blades</li><li><strong>Guard:</strong> Rigid protective wire grill</li></ul>', 
+'assets/images/products/pedestal_fan_economy_23.jpg', 
+'Hindfan ECONOMY 23 inch Pedestal Fan', 
+'Warehouses & Community Halls', 
+'2026-01-01', 
+'http://hindfan.com', 
+'23 Inch Sweep, 170W, 1400 RPM, Rigid Wire Grill, Aerodynamic Blades', 
+'ECONOMY 23" Pedestal Fan | Hindson Industries', 
+'Hindfan ECONOMY 23 inch commercial pedestal fan. 170W motor, 1400 RPM, large air sweep.', 
+0, 'published', 21, 380, NOW(), NOW()),
+
+-- 6. ECONOMY 26" Pedestal Fan (Brochure Page 8)
+(1, 
+'ECONOMY 26" High-Capacity Industrial Pedestal Fan', 
+'economy-26-high-capacity-industrial-pedestal-fan', 
+'Massive 26-inch commercial fan designed to move large air volumes across large open areas and factories.', 
+'<p>The <strong>ECONOMY 26" Pedestal Fan</strong> delivers maximum air displacement for large factory shop floors, manufacturing sheds, and outdoor gathering spaces.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 26 inches (660 mm)</li><li><strong>Power Consumption:</strong> 190 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> Heavy-duty motor with continuous rating</li><li><strong>Blade:</strong> 26" wide-chord balanced aluminium blades</li><li><strong>Base:</strong> Weighted stable floor base</li></ul>', 
+'assets/images/products/pedestal_fan_economy_26.jpg', 
+'Hindfan ECONOMY 26 inch Pedestal Fan', 
+'Large Factories & Open Marquees', 
+'2026-01-01', 
+'http://hindfan.com', 
+'26 Inch Sweep, 190W, 1400 RPM, 26" Blades, Continuous Duty', 
+'ECONOMY 26" Pedestal Fan | Hindson Industries', 
+'ECONOMY 26 inch industrial air circulator pedestal fan by Hindfan. 190W, 1400 RPM, massive air volume.', 
+0, 'published', 22, 360, NOW(), NOW()),
+
+-- 7. 30" TENT COOLER Industrial Air Cooler (Brochure Page 13)
+(3, 
+'30" Heavy Duty Industrial Tent Cooler', 
+'30-heavy-duty-industrial-tent-cooler', 
+'High-capacity 30-inch industrial air cooler engineered for tent houses, banquet lawns, and large event gatherings.', 
+'<p>The <strong>30" Industrial Tent Cooler</strong> by Hindson Industries is specifically developed for event organizers, tent suppliers, catering firms, and large industrial sheds. Designed to handle severe summer heat, it combines a high-velocity 30-inch fan with a heavy-duty steel body and high air throw.</p><h3>Technical Specifications</h3><ul><li><strong>Fan Sweep:</strong> 30 inches (750 mm)</li><li><strong>Body Construction:</strong> Heavy-gauge galvanized sheet with anti-corrosive powder coating</li><li><strong>Motor:</strong> 100% Pure Copper Winding High-Torque Motor</li><li><strong>Air Throw:</strong> Powerful extended air throw for large pandals and halls</li><li><strong>Application:</strong> Marquee tents, banquet halls, industrial plants, open lawns</li><li><strong>Mobility:</strong> Heavy castor wheels for effortless positioning</li></ul>', 
+'assets/images/products/tent_cooler_30.jpg', 
+'Hindfan 30 inch Industrial Tent Cooler', 
+'Tent Houses, Banquet Lawns & Caterers', 
+'2026-01-01', 
+'http://hindfan.com', 
+'30 Inch Fan Sweep, Heavy Steel Body, Pure Copper Motor, Castor Wheels, High Air Throw', 
+'30" Heavy Duty Industrial Tent Cooler | Hindfan', 
+'Hindson Industries 30 inch industrial tent cooler. Heavy-duty metal body, copper motor, designed for tents and banquets.', 
+1, 'published', 23, 740, NOW(), NOW()),
+
+-- 8. FRESHAIR Domestic Fan 9" & 12" (Brochure Page 16)
+(7, 
+'FRESHAIR Domestic Ventilation Fan (9" & 12")', 
+'freshair-domestic-ventilation-fan-9-12-inch', 
+'Quiet domestic and commercial fresh air exhaust fan available in 9-inch and 12-inch sizes with pure copper winding.', 
+'<p>The <strong>FRESHAIR Domestic Fan</strong> by Hindson Industries delivers rapid air exchange for kitchens, bathrooms, commercial cabins, and small storage rooms. Built with precision copper winding for silent, vibration-free, continuous operation.</p><h3>Technical Specifications</h3><ul><li><strong>Available Sizes:</strong> 9 inches (225 mm) and 12 inches (300 mm)</li><li><strong>Power Consumption:</strong> 55 Watts - 75 Watts</li><li><strong>Operating Speed:</strong> 1350 RPM</li><li><strong>Motor Construction:</strong> 100% Pure Copper Winding</li><li><strong>Blades:</strong> High-efficiency steel/metal blades</li><li><strong>Frame:</strong> Rust-resistant epoxy powder coated housing</li><li><strong>Application:</strong> Domestic kitchens, restrooms, office cabins, pantry rooms</li></ul>', 
+'assets/images/products/freshair_fan_domestic.jpg', 
+'Hindfan FRESHAIR Domestic Ventilation Fan', 
+'Domestic Kitchens, Commercial Cabins & Bathrooms', 
+'2026-01-01', 
+'http://hindfan.com', 
+'9" & 12" Sizes, 55W-75W, 1350 RPM, 100% Copper Motor, Silent Operation', 
+'FRESHAIR Domestic Exhaust Fan (9" & 12") | Hindfan', 
+'Buy Hindfan FRESHAIR domestic ventilation fan in 9 and 12 inch sizes. 100% copper motor, 1350 RPM, whisper quiet.', 
+1, 'published', 24, 510, NOW(), NOW()),
+
+-- 9. TRANSAIR 12" Heavy Duty Industrial Exhaust Fan (Brochure Page 17)
+(7, 
+'TRANSAIR 12" Heavy Duty Industrial Exhaust Fan', 
+'transair-12-heavy-duty-industrial-exhaust-fan', 
+'Rugged 12-inch industrial exhaust fan with double ball bearing copper motor for commercial kitchens and factories.', 
+'<p>The <strong>TRANSAIR Heavy Duty Industrial Exhaust Fan</strong> is built to rapidly extract smoke, fumes, heat, and airborne particulate from commercial kitchens, restaurant ovens, welding shops, and factory floors.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep / Size:</strong> 12 inches (300 mm)</li><li><strong>Power Consumption:</strong> 90W - 120W</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor:</strong> 100% Electrolytic Copper Winding, Dual Heavy Ball Bearings</li><li><strong>Frame & Guard:</strong> Heavy-gauge welded steel frame with wire safety guard</li><li><strong>Blades:</strong> Heavy-duty aerodynamic steel impeller blades</li><li><strong>Application:</strong> Commercial kitchens, bakeries, factories, workshops, boiler rooms</li></ul>', 
+'assets/images/products/exhaust_fan_transair.jpg', 
+'Hindfan TRANSAIR 12 inch Industrial Exhaust Fan', 
+'Commercial Kitchens, Factories & Welding Shops', 
+'2026-01-01', 
+'http://hindfan.com', 
+'12 Inch Sweep, 90W-120W, 1400 RPM, Heavy Steel Frame, Double Ball Bearings', 
+'TRANSAIR 12" Heavy Duty Industrial Exhaust Fan | Hindfan', 
+'Hindfan TRANSAIR 12 inch heavy duty industrial exhaust fan. Copper motor, double ball bearings, 1400 RPM.', 
+1, 'published', 25, 670, NOW(), NOW()),
+
+-- 10. SANJIVNI Domestic Madhani 3-5 KG (Brochure Page 18)
+(2, 
+'SANJIVNI Domestic Madhani Milk Churner (3-5 KG)', 
+'sanjivni-domestic-madhani-milk-churner-3-5-kg', 
+'Reliable household electric madhani churner featuring a 70W copper motor and food-grade stainless spinor.', 
+'<p>The <strong>SANJIVNI Madhani</strong> is an authentic Punjab household favorite engineered by Hindson Industries. Designed for daily churning of curd to yield pure butter (makhan) and buttermilk (lassi) effortlessly in minutes.</p><h3>Technical Specifications</h3><ul><li><strong>Batch Capacity:</strong> 3 to 5 KG</li><li><strong>Power Consumption:</strong> 70 Watts</li><li><strong>Motor Winding:</strong> 100% Pure Copper Magnet Wire</li><li><strong>Spinor:</strong> Food-grade stainless steel & aluminium spinor</li><li><strong>Body & Pillar:</strong> Heavy chrome-plated stand with secure pot clamp</li><li><strong>Operation:</strong> Smooth reversible two-way rotary churn mechanism</li></ul>', 
+'assets/images/products/madhani_sanjivni.jpg', 
+'Hindfan SANJIVNI Domestic Madhani Churner', 
+'Households & Rural Dairy Kitchens', 
+'2026-01-01', 
+'http://hindfan.com', 
+'3-5 KG Capacity, 70W, 100% Copper Motor, Food-Grade Spinor, Chrome Plated', 
+'SANJIVNI Domestic Madhani Churner (3-5 KG) | Hindfan', 
+'Original HIND SANJIVNI Madhani milk churner 3-5 kg. 70W copper motor, food-grade spinor, authentic butter churning.', 
+1, 'published', 26, 890, NOW(), NOW()),
+
+-- 11. SUKHMANI Dairy Madhani 10-15 KG (Brochure Page 19)
+(2, 
+'SUKHMANI Dairy Madhani Churner (10-15 KG)', 
+'sukhmani-dairy-madhani-churner-10-15-kg', 
+'Medium-scale dairy madhani churner with 110W heavy-duty copper motor for 10-15 KG milk/curd churning.', 
+'<p>The <strong>SUKHMANI Madhani</strong> bridges the gap between home churners and heavy industrial units, ideal for sweet makers (Halwai), small dairy cooperatives, and rural farmsteads processing 10 to 15 kg batches.</p><h3>Technical Specifications</h3><ul><li><strong>Batch Capacity:</strong> 10 to 15 KG</li><li><strong>Power Consumption:</strong> 110 Watts</li><li><strong>Motor Construction:</strong> Heavy-duty pure copper winding with thermal protection</li><li><strong>Spinor:</strong> Heavy-gauge food-grade churning spinor</li><li><strong>Base & Clamping:</strong> Sturdy cast iron base with vibration dampers</li><li><strong>Application:</strong> Halwai shops, dairy milk collection centers, rural farms</li></ul>', 
+'assets/images/products/madhani_sukhmani.jpg', 
+'Hindfan SUKHMANI Dairy Madhani Churner', 
+'Halwai Shops & Small Dairy Cooperatives', 
+'2026-01-01', 
+'http://hindfan.com', 
+'10-15 KG Capacity, 110W, Pure Copper Winding, Heavy Food Spinor, Cast Iron Stand', 
+'SUKHMANI Dairy Madhani Churner (10-15 KG) | Hindfan', 
+'Buy Hindfan SUKHMANI 10-15 KG dairy madhani churner. 110W pure copper motor for halwai shops and small dairies.', 
+1, 'published', 27, 760, NOW(), NOW()),
+
+-- 12. 30" MOVEABLE Heavy Duty Pedestal Fan (Brochure Page 30)
+(1, 
+'30" MOVEABLE Heavy Duty Industrial Pedestal Fan', 
+'30-moveable-heavy-duty-industrial-pedestal-fan', 
+'Flagship 30-inch industrial air circulator on a moveable wheel trolley base with 250W high-torque copper motor.', 
+'<p>The <strong>30" MOVEABLE Heavy Duty Pedestal Fan</strong> is Hindson Industries\' most powerful mobile ventilation unit. Built on a heavy wheeled trolley frame, it allows one operator to effortlessly roll massive cooling power across shop floors, shipping bays, aircraft hangars, or outdoor exhibitions.</p><h3>Technical Specifications</h3><ul><li><strong>Sweep:</strong> 30 inches (750 mm)</li><li><strong>Power Consumption:</strong> 250 Watts</li><li><strong>Operating Speed:</strong> 1400 RPM</li><li><strong>Motor Construction:</strong> 100% Pure Copper Winding, Dual Heavy-Duty Sealed Ball Bearings</li><li><strong>Blades:</strong> 3-Leaf Heavy-Duty Aerodynamic Aluminium Blades</li><li><strong>Base:</strong> Heavy-duty trolley base equipped with industrial castor wheels</li><li><strong>Safety:</strong> High-gauge close-mesh steel finger guard</li><li><strong>Application:</strong> Heavy industrial plants, steel fabrication yards, railway depots, large event pandals</li></ul>', 
+'assets/images/products/pedestal_fan_moveable_30.jpg', 
+'Hindfan 30 inch Moveable Heavy Duty Pedestal Fan', 
+'Heavy Industrial Plants, Marquees & Warehouses', 
+'2026-01-01', 
+'http://hindfan.com', 
+'30 Inch Sweep, 250W, 1400 RPM, Moveable Trolley Base, Castor Wheels, 100% Copper', 
+'30" MOVEABLE Heavy Duty Pedestal Fan | Hindson Industries', 
+'Hindfan 30 inch MOVEABLE heavy duty industrial pedestal fan with wheel trolley base. 250W copper motor, 1400 RPM.', 
+1, 'published', 28, 830, NOW(), NOW());
